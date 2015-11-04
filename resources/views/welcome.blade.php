@@ -38,7 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">may.press</div>
+                <div class="title">may</div>
             </div>
         </div>
     </body>
