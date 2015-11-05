@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=Leckerli+One);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5754,6 +5756,30 @@ button.close {
     display: none !important; } }
 
 body {
-  background-color: #ccc; }
+  background-color: #fff; }
+
+.logo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  margin: 10px 15px 0 10px !important;
+  display: inline-block;
+  color: #8C8C8C;
+  letter-spacing: 1px; }
+  .logo strong {
+    color: #9C4B4B; }
+
+.tag {
+  font-size: 1em;
+  font-family: times;
+  color: #8C8C8C;
+  margin: -10px 0 0 0px !important; }
+
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: none; }
+
+@media (max-width: 600px) {
+  .tag {
+    display: none; } }
 
 /*# sourceMappingURL=app.css.map */
