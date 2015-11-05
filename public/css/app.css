@@ -7,6 +7,7 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(https://fonts.googleapis.com/css?family=Leckerli+One);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5756,27 +5757,35 @@ button.close {
     display: none !important; } }
 
 body {
-  background-color: #fff; }
+  background-color: #FFFBF3; }
 
 .logo {
   font-family: 'Oswald', sans-serif;
+  font-weight: 100;
   font-size: 2em;
-  margin: 10px 15px 0 10px !important;
+  margin: 10px 15px 0 0px !important;
   display: inline-block;
   color: #8C8C8C;
   letter-spacing: 1px; }
-  .logo strong {
-    color: #9C4B4B; }
+  .logo .may {
+    color: #9C4B4B;
+    font-weight: 100; }
 
 .tag {
-  font-size: 1em;
-  font-family: times;
+  font-family: 'Bitter', serif !important;
+  font-size: .8em;
   color: #8C8C8C;
   margin: -10px 0 0 0px !important; }
 
+.writing {
+  padding: 80px 0 0 0;
+  font-family: 'Bitter', serif !important;
+  font-size: 1.5em;
+  color: #1F1F1F; }
+
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: none; }
+  background-color: #fff;
+  border-color: #fff; }
 
 @media (max-width: 600px) {
   .tag {
