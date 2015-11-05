@@ -5766,7 +5766,7 @@ body {
   margin: 10px 15px 0 0px !important;
   display: inline-block;
   color: #8C8C8C;
-  letter-spacing: 1px; }
+  letter-spacing: -.02em; }
   .logo .may {
     color: #9C4B4B;
     font-weight: 100; }
