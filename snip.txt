@@ -1,0 +1,114 @@
+//////////////ROUTE
+
+Route::get('posts/{post}/comments/{comment}', function ($postId, $commentId) {
+    
+});
+
+Route::get('user/profile', 'UserController@showProfile')->name('profile');
+
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', function ()    {
+        // Uses Auth Middleware
+    });
+
+    Route::get('user/profile', function () {
+        // Uses Auth Middleware
+    });
+});
+
+Route::resource('photo', 'PhotoController');
+
+Route::get('user/{id}', 'UserController@showProfile');
+
+//////////////MODEL
+php artisan make:model Foo -m
+
+//////////////CONTROLLER
+
+//
+public function showProfile($id)
+{
+    return view('user.profile', ['user' => User::findOrFail($id)]);
+}
+//
+
+$sid = Input::get('sid');
+$goal = Input::get('addGoalIn');
+$arr = array(
+	'subject_id' => $sid,
+	'user_id' => Auth::user()->id,
+	'goal' => $goal,
+	);
+$goal = new Goal();
+$goal->fill($arr);
+$goal->save();
+return "Goal Updated";
+
+//
+return View::make('path.page', compact('x', 'y'));
+//
+return Redirect::to('/subjects/'))->with('danger', 'You Need To Add Some Text To Your Note.');
+
+//////////////ELEQUENT
+
+
+//////////////JQUERY
+
+$( document ).ready(function() {
+
+});
+
+//
+
+$( "a" ).click (function( ) {
+    alert( "Thanks for visiting!" );
+});
+
+//
+
+$.ajax({
+	type: 'POST',
+	url: '/addNewGoal',
+	data: {
+		'sid': sid,
+		'addGoalIn': addGoalIn
+	},
+	success: function(data) {
+
+		$('.loadGoal').html('<p>'+addGoalIn+'</p>');
+
+	}
+});
+
+//
+var sid = $('.subject_id').val();
+//
+var sid = $(this).data("sid");
+
+//////////////HTML
+<link rel="stylesheet" type="text/css" href="theme.css">
+<script src="myscripts.js"></script>
+//
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Change Me</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="Dana" content="This makes the world better">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+<body>
+
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
+
+
+
+//////////////CSS
