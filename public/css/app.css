@@ -5757,7 +5757,7 @@ button.close {
     display: none !important; } }
 
 body {
-  background-color: #FFFBF3; }
+  background-color: #FBECCE; }
 
 .logo {
   font-family: 'Oswald', sans-serif;
@@ -5783,12 +5783,28 @@ body {
   font-size: 1.5em;
   color: #1F1F1F; }
 
+.titleImg {
+  height: 15px;
+  width: 100%;
+  margin: auto; }
+  .titleImg img {
+    width: 400px; }
+
 .navbar-default {
   background-color: #fff;
   border-color: #fff; }
 
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0px;
+  padding-right: 0px; }
+
 @media (max-width: 600px) {
   .tag {
-    display: none; } }
+    display: none; }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px; } }
 
 /*# sourceMappingURL=app.css.map */

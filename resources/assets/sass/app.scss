@@ -4,8 +4,9 @@
 @import url(https://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
 
 body {
-	background-color: #FFFBF3; 
+	background-color: #FBECCE; 
 }
+//header
 .logo {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 100;
@@ -33,15 +34,36 @@ body {
 	color: #1F1F1F;
 }
 
+//body
+.titleImg {
+	height: 15px;
+	width: 100%;
+	margin: auto;
+	img {
+		width: 400px;
+
+	}
+}
+
 //overrides
 .navbar-default {
 	background-color: #fff;
 	border-color: #fff;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px; 
+    padding-right: 0px; 
 }
 //media q
 @media (max-width: 600px) {
 	.tag {
 		display:none;
 	}
+	.container {
+    padding-left: 15px; 
+    padding-right: 15px; 
+}
 }
 

@@ -11,7 +11,7 @@
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<a class="navbar-brand" href="#">
-							<span class="logo"><span class="may">may</span>/press</span><span class="tag">Independent Online Publisher</span>
+							<span class="logo"><span class="may">may</span>/press</span><span class="tag">An Online Publisher</span>
 						</a>
 					</div>
 				</div>
@@ -22,6 +22,9 @@
 		<div class="col-md-12">
 			<img src="" alt="">
 			<div class="writing">
+				<div class="sectionDiv" style="background-color: #F9E1B1; height: 10px">
+					
+				</div>
 				<h1>The Machine</h1>
 				<p>
 					The machine woke one day. It was fall. Late 2015.
