@@ -4,5 +4,5 @@
 
 
 @section('content')
-    <p>This is my body content.</p>
+    <button>nice</button>
 @stop
