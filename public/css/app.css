@@ -8,6 +8,7 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 @import url(https://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Special+Elite);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,900);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5757,10 +5758,10 @@ button.close {
     display: none !important; } }
 
 [contentEditable=true]:empty:not(:focus):before {
-  font-family: 'Bitter', serif !important;
+  font-family: 'lato', cursive;
   content: attr(data-ph);
-  color: #A3A5A4;
-  font-weight: 400; }
+  color: #343434;
+  font-weight: 300; }
 
 ::-moz-selection {
   background: #F4DC6F;
@@ -5776,6 +5777,45 @@ button.close {
 
 body {
   background-color: #fff; }
+
+#r-mainActions {
+  font-family: 'lato', cursive;
+  font-size: 1.3em;
+  background-color: #FAFAFA;
+  padding: 70px 50px 50px 50px;
+  box-sizing: content-box;
+  font-weight: 300; }
+  #r-mainActions small {
+    margin: 20px 0 0 0;
+    display: block; }
+  #r-mainActions ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin: 0px 0 0 0;
+    position: absolute;
+    top: 3px;
+    left: 50px; }
+    #r-mainActions ul li {
+      margin: 20px 15px 0 0;
+      display: inline-block; }
+      #r-mainActions ul li a {
+        font-family: 'lato', cursive;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: .8em;
+        color: #555555; }
+        #r-mainActions ul li a:hover {
+          background-color: #F8E57B; }
+  #r-mainActions .closePanels {
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    font-size: 20px;
+    color: #343434; }
+    #r-mainActions .closePanels a {
+      text-decoration: none;
+      color: #343434; }
 
 .may {
   font-family: 'Special Elite', cursive;
@@ -5794,11 +5834,12 @@ body {
 
 .writing {
   padding: 0px 0 0 0;
-  font-family: 'Bitter', serif !important;
+  font-family: 'lato', cursive;
   font-size: 1.5em;
-  color: #5A5A5A; }
+  color: #343434; }
   .writing .write {
-    padding: 10px 10px 10px 10px; }
+    padding: 10px 10px 10px 10px;
+    font-weight: 300; }
   .writing .write:focus, .writing .title:focus {
     border: none;
     border-bottom: 1px dashed #ccc;
@@ -5806,7 +5847,7 @@ body {
   .writing .title {
     padding: 10px 10px 10px 10px;
     font-size: 1.4em;
-    font-weight: 200; }
+    font-weight: 300; }
   .writing p {
     font-size: .9em;
     margin-top: 20px; }

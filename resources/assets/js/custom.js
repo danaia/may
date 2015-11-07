@@ -1,7 +1,21 @@
 
 $( document ).ready(function() {
+
+	//init stuff
+
+	$("#r-mainActions").slideReveal({
+		trigger: $("#trigger"),
+		position: "right",
+		width: 400,
+		speed: 200
+	});
+
+	//click stuff
+
 	$('.logo').on("click",".may",function(e){
 	});
+
+	$('a .closePanels').slideReveal("hide");
 
 
 	$('.write').focusout(function() {

@@ -2,6 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 @import url(https://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Special+Elite);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,900);
+
 
 //mixins
 
@@ -10,13 +12,19 @@
 	padding: 0;
 }
 
+//varibles
+$prime: #F8E57B;
+$link-grey: #343434;
+$write-grey: #343434;
+$link-light-grey: #555555;
+
 //general
 
 [contentEditable=true]:empty:not(:focus):before{
-	font-family: 'Bitter', serif !important;
+	font-family: 'lato', cursive;
 	content:attr(data-ph);
-	color: #A3A5A4;
-	font-weight: 400;
+	color: $link-grey;
+	font-weight: 300;
 }
 
 ::selection {
@@ -30,6 +38,61 @@ body {
 	background-color: #fff; 
 }
 
+#r-mainActions {
+	font-family: 'lato', cursive;
+	font-size: 1.3em;
+	background-color: #FAFAFA;
+	padding: 70px 50px 50px 50px;
+	box-sizing: content-box; 
+	font-weight: 300;
+
+	small {
+		margin: 20px 0 0 0;
+		display: block;
+	}
+
+	ul{
+		@include norm();
+		list-style: none;
+		margin: 0px 0 0 0;
+		position: absolute;
+		top: 3px;
+		left: 50px;
+
+		li{
+			margin: 20px 15px 0 0;
+			display: inline-block;
+
+			a{
+				font-family: 'lato', cursive;
+				font-weight: 600;
+				text-decoration: none;
+				font-size: .8em;
+				color: $link-light-grey;
+
+				&:hover {
+					background-color: $prime;
+					//padding: 3px 7px;
+				}
+			}
+		}
+	}
+
+	.closePanels {
+		position: absolute;
+		right: 30px;
+		top: 25px;
+		font-size: 20px;
+		color: $link-grey;
+
+		a{
+			text-decoration: none;
+			color: $link-grey;
+		}
+	}
+
+}
+
 //header
 .may {
 	font-family: 'Special Elite', cursive;
@@ -38,7 +101,7 @@ body {
 	margin: 15px 25px 0 0px !important;
 	letter-spacing: -.09em;
 	color: #707070;
-	background-color: #F8E57B;
+	background-color: $prime;
 	text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
 	float: right;
 	padding: 4px  11px 0px 14px;
@@ -54,12 +117,13 @@ body {
 .writing {
 
 	padding: 0px 0 0 0;
-	font-family: 'Bitter', serif !important;
+	font-family: 'lato', cursive;
 	font-size: 1.5em;
-	color: #5A5A5A;
+	color: $write-grey;
 
 	.write {
 		padding: 10px 10px 10px 10px;
+		font-weight: 300;
 	}
 	.write:focus, .title:focus {
 		border: none;
@@ -70,7 +134,7 @@ body {
 	.title{
 		padding: 10px 10px 10px 10px;
 		font-size: 1.4em;
-		font-weight: 200;
+		font-weight: 300;
 	}
 	p{
 		font-size: .9em;
