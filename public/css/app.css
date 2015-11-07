@@ -5,7 +5,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url(https://fonts.googleapis.com/css?family=Leckerli+One);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 @import url(https://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Special+Elite);
@@ -5757,13 +5756,26 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+[contentEditable=true]:empty:not(:focus):before {
+  font-family: 'Bitter', serif !important;
+  content: attr(data-ph);
+  color: #A3A5A4;
+  font-weight: 400; }
+
+::-moz-selection {
+  background: #F4DC6F;
+  /* WebKit/Blink Browsers */ }
+
+::selection {
+  background: #F4DC6F;
+  /* WebKit/Blink Browsers */ }
+
+::-moz-selection {
+  background: #F4DC6F;
+  /* Gecko Browsers */ }
+
 body {
   background-color: #fff; }
-
-[contenteditable=true]:empty:before {
-  content: attr(placeholder);
-  display: block;
-  /* For Firefox */ }
 
 .may {
   font-family: 'Special Elite', cursive;
@@ -5775,47 +5787,29 @@ body {
   background-color: #F8E57B;
   text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
   float: right;
-  padding: 4px  11px 0px 14px; }
-
-.tag {
-  font-family: 'Bitter', serif !important;
-  font-size: .8em;
-  color: #8C8C8C;
-  margin: -10px 0 0 0px !important; }
-
-.write {
-  padding: 10px 10px 10px 10px; }
-
-.write:focus {
-  border: none;
-  border: 1px dashed #ccc;
-  outline: 0px solid transparent; }
+  padding: 4px  11px 0px 14px;
+  text-decoration: none; }
+  .may:hover {
+    text-decoration: none; }
 
 .writing {
   padding: 0px 0 0 0;
   font-family: 'Bitter', serif !important;
   font-size: 1.5em;
   color: #5A5A5A; }
-  .writing h1 {
+  .writing .write {
+    padding: 10px 10px 10px 10px; }
+  .writing .write:focus, .writing .title:focus {
+    border: none;
+    border-bottom: 1px dashed #ccc;
+    outline: 0px solid transparent; }
+  .writing .title {
     padding: 10px 10px 10px 10px;
     font-size: 1.4em;
     font-weight: 200; }
   .writing p {
     font-size: .9em;
     margin-top: 20px; }
-  .writing .chapter {
-    font-family: 'Oswald', cursive;
-    font-size: .8em;
-    font-weight: 100;
-    text-transform: uppercase;
-    margin-bottom: 30px; }
-
-.titleImg {
-  height: 15px;
-  width: 100%;
-  margin: auto; }
-  .titleImg img {
-    width: 400px; }
 
 .navbar-default {
   background-color: #fff;

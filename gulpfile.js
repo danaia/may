@@ -19,3 +19,9 @@ elixir(function(mix) {
 elixir(function(mix) {
    mix.livereload();
 });
+
+elixir(function(mix) {
+    mix.scripts([
+        'custom.js'
+    ]);
+});
