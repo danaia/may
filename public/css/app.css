@@ -8,6 +8,7 @@
 @import url(https://fonts.googleapis.com/css?family=Leckerli+One);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 @import url(https://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5757,19 +5758,24 @@ button.close {
     display: none !important; } }
 
 body {
-  background-color: #FBECCE; }
+  background-color: #fff; }
 
-.logo {
-  font-family: 'Oswald', sans-serif;
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block;
+  /* For Firefox */ }
+
+.may {
+  font-family: 'Special Elite', cursive;
   font-weight: 100;
-  font-size: 2em;
-  margin: 10px 15px 0 0px !important;
-  display: inline-block;
-  color: #8C8C8C;
-  letter-spacing: -.02em; }
-  .logo .may {
-    color: #9C4B4B;
-    font-weight: 100; }
+  font-size: 1.7em;
+  margin: 15px 25px 0 0px !important;
+  letter-spacing: -.09em;
+  color: #707070;
+  background-color: #F8E57B;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+  float: right;
+  padding: 4px  11px 0px 14px; }
 
 .tag {
   font-family: 'Bitter', serif !important;
@@ -5777,11 +5783,32 @@ body {
   color: #8C8C8C;
   margin: -10px 0 0 0px !important; }
 
+.write {
+  padding: 10px 10px 10px 10px; }
+
+.write:focus {
+  border: none;
+  border: 1px dashed #ccc;
+  outline: 0px solid transparent; }
+
 .writing {
-  padding: 80px 0 0 0;
+  padding: 0px 0 0 0;
   font-family: 'Bitter', serif !important;
   font-size: 1.5em;
-  color: #1F1F1F; }
+  color: #5A5A5A; }
+  .writing h1 {
+    padding: 10px 10px 10px 10px;
+    font-size: 1.4em;
+    font-weight: 200; }
+  .writing p {
+    font-size: .9em;
+    margin-top: 20px; }
+  .writing .chapter {
+    font-family: 'Oswald', cursive;
+    font-size: .8em;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 30px; }
 
 .titleImg {
   height: 15px;
