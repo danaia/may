@@ -42,11 +42,10 @@ class WriteController extends Controller
     {
 
         $write = Input::get('writings');
-        $title = 'Input::get('title')';
+
 
         $arr = array(
-            'writings' => $write,
-            'title' => $title
+            'writings' => $write
             );
         $w = new Write();
         $w->fill($arr);
