@@ -5,13 +5,26 @@
 	<title>May</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="csrf-token" content="{{ Session::token() }}"> 
-	<link rel="stylesheet" type="text/css" href="fonts/lnr/style.css">
-	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/lnr/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/app.css">
+	<link rel="stylesheet" type="text/css" href="/bower_components/toastr/toastr.min.css">
 </head>
 <body>
 	<div class="row logo">
 		<div class="col-md-12">
-			<a href='#' class="may" id='trigger'>m˚p</a>
+			<div class="may pull-right">m˚p</div>
+			<div class="utl">
+				<ul>
+					@if (Auth::user())
+					<li>
+						<a href="#">{{Auth::user()->name}}</a>
+					</li>
+					<li >
+						<a href="/auth/logout"><i class='lnr lnr-power-switch' ></i>Logout</a>
+					</li>
+					@endif
+				</ul>
+			</div>
 		</div>
 	</div>
 
@@ -19,36 +32,7 @@
 		@yield('content')
 	</div>
 	<script src="js/j.js"></script>
+	<script src="/bower_components/toastr/toastr.js"></script>
 	<script src="js/all.js"></script>
-	<script src="bower_components/slidereveal/dist/jquery.slidereveal.min.js"></script>
-
-	<script type="text/javascript">
-
-		$( document ).ready(function() {
-			$.ajaxSetup({
-				headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
-			});
-		});
-
-	</script>
-
-	<div id='r-mainActions'>
-		<ul>
-			<li>
-				<a href="#">Explore Works</a>
-			</li>
-
-			<li>
-				<a href="#">Start Writing</a>
-			</li>
-		</ul>
-
-		<a href="#" class="closePanels pull-right"><i class='lnr lnr-chevron-right'></i></a>
-		
-		May/Press is a comfortable place to explore writings from others and with yourself. Create, share and explore all in a simple and easy to use environment. 
-		<br>
-		<small>Enjoy.</small> 
-
-	</div>
 </body>
 </html>

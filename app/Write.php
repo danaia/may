@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Write extends Model
 {
-	protected $fillable = ['writings'];
+	protected $fillable = ['writings', 'title', 'user_id'];
 }

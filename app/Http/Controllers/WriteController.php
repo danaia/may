@@ -6,12 +6,19 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Auth;
 use App\Write;
 use Input;
 
 class WriteController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +26,7 @@ class WriteController extends Controller
      */
     public function index()
     {
-        //return View::('pages.write');
+        return view('pages.write');
     }
 
     /**
@@ -38,14 +45,17 @@ class WriteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Requests\WriteRequest $request)
     {
 
         $write = Input::get('writings');
-
-
+        $title = Input::get('title');
+        $uid = Auth::user()->id ;
+        
         $arr = array(
-            'writings' => $write
+            'user_id' => $uid,
+            'writings' => $write,
+            'title' => $title
             );
         $w = new Write();
         $w->fill($arr);
