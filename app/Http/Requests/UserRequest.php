@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class WriteRequest extends Request
+class UserRequest extends Request
 {
 /**
 * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class WriteRequest extends Request
 */
 public function authorize()
 {
-	return true;
+    return true;
 }
 
 /**
@@ -23,17 +23,19 @@ public function authorize()
 */
 public function rules()
 {
-	return [
-	'title' => 'required',
-	'writings' => 'required' 
-	];
+    return [
+    'name' => 'required',
+    'email' => 'required',
+    'bio' => 'required',
+    ];
 }
 
 public function messages()
 {
-	return [
-	'writings.required' => "Have writer's block already? Enter some text above.",
-	'title.required' => "Might want to add a title...",
-	];
+    return [
+    'name.required' => "Your name can not be empty",
+    'email.required' => "Your email can not be empty",
+    ];
+}
 }
 }

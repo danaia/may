@@ -1,20 +1,20 @@
 //////////////ROUTE
 
 Route::get('posts/{post}/comments/{comment}', function ($postId, $commentId) {
-    
+  
 });
 
 Route::get('user/profile', 'UserController@showProfile')->name('profile');
 
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/', function ()    {
+  Route::get('/', function ()    {
         // Uses Auth Middleware
-    });
+      });
 
-    Route::get('user/profile', function () {
+  Route::get('user/profile', function () {
         // Uses Auth Middleware
-    });
+      });
 });
 
 Route::resource('photo', 'PhotoController');
@@ -29,7 +29,7 @@ php artisan make:model Foo -m
 //
 public function showProfile($id)
 {
-    return view('user.profile', ['user' => User::findOrFail($id)]);
+  return view('user.profile', ['user' => User::findOrFail($id)]);
 }
 //
 
@@ -55,6 +55,14 @@ return Redirect::to('/subjects/'))->with('danger', 'You Need To Add Some Text To
 
 //////////////JQUERY
 
+$( "#clickme" ).click(function() {
+  $( "#book" ).slideToggle( "slow", function() {
+    // Animation complete.
+  });
+});
+
+///
+
 $( document ).ready(function() {
 
 });
@@ -62,7 +70,7 @@ $( document ).ready(function() {
 //
 
 $( "a" ).click (function( ) {
-    alert( "Thanks for visiting!" );
+  alert( "Thanks for visiting!" );
 });
 
 //
@@ -94,56 +102,66 @@ var sid = $(this).data("sid");
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
 
-  <title>Change Me</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="Dana" content="This makes the world better">
+<title>Change Me</title>
+<meta name="description" content="The HTML5 Herald">
+<meta name="Dana" content="This makes the world better">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+<link rel="stylesheet" href="css/styles.css?v=1.0">
 </head>
 <body>
 
 
-  <script src="js/scripts.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
 
 ///
 
-  <div id='r-mainActions'>
-    <ul>
-      <li>
-        <a href="#">Explore Works</a>
-      </li>
+<div id='r-mainActions'>
+<ul>
+<li>
+<a href="#">Explore Works</a>
+</li>
 
-      <li>
-        <a href="#">Start Writing</a>
-      </li>
-    </ul>
+<li>
+<a href="#">Start Writing</a>
+</li>
+</ul>
 
-    {{-- <a href="#" class="closePanels pull-right"><i class='lnr lnr-chevron-right'></i></a> --}}
-    
-    May/Press is a comfortable place to explore writings from others and with yourself. Create, share and explore all in a simple and easy to use environment. 
-    <br>
-    <small>Enjoy.</small> 
-    <script src="js/j.js"></script>
-    <script src="bower_components/slidereveal/dist/jquery.slidereveal.min.js"></script>
-    <script src="js/all.js"></script>
+{{-- <a href="#" class="closePanels pull-right"><i class='lnr lnr-chevron-right'></i></a> --}}
 
-
-    <script type="text/javascript">
-
-      $( document ).ready(function() {
-        $.ajaxSetup({
-          headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
-        });
-      });
-
-    </script>
+May/Press is a comfortable place to explore writings from others and with yourself. Create, share and explore all in a simple and easy to use environment. 
+<br>
+<small>Enjoy.</small> 
+<script src="js/j.js"></script>
+<script src="bower_components/slidereveal/dist/jquery.slidereveal.min.js"></script>
+<script src="js/all.js"></script>
 
 
-  </div>
+<script type="text/javascript">
+
+$( document ).ready(function() {
+  $.ajaxSetup({
+    headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+  });
+});
+
+</script>
+
+
+</div>
+
+  ///
+
+  <span class='userInfo pull-right'>
+  @if (Auth::guest())
+  <a href="/auth/login"></a>
+  @else
+  <a href="/auth/logout">Logout</a>
+  @endif
+  </span>
 
 
 

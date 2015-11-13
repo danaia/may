@@ -1,14 +1,27 @@
 <?php
 
-Route::get('/home', function () {
-    return view('pages.home');
-});
+// use App\Http\Lib\Family;
+// Route::get('/nice', function () {
+//     return Family::getFam();
+// });
+
+// use App\Http\Lib\Util;
+// Route::get('/image', function () {
+//     return Util::gravatar();
+// });
+
+// Route::get('/user/{id}', function ($id) {
+//     return App\User::find($id);
+// });
+
+
 
 Route::get('/', function () {
     return view('pages.home');
 });
 
 Route::resource('/write', 'WriteController');
+Route::resource('/user', 'UserController');
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');

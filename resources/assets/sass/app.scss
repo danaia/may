@@ -31,6 +31,34 @@ body {
 	}
 }
 
+.profileInfo {
+	display: none;
+	padding: 25px;
+	background-color: #EFFFF2;
+
+	label {
+		font-family: "Lato";
+		text-transform: uppercase;
+		display: block;
+		font-size: .7em;
+		font-weight: 600;
+	}
+	.editable {
+		border: none;
+		font-size: 1.3em;
+		border-bottom: 1px dashed #A0A0A0;
+		outline: 0px solid transparent;
+		margin-bottom: 25px;
+	}
+
+}
+
+.cancelProfilePanel {
+	text-transform: uppercase;
+	font-size: .7em;
+	margin-left: 5px;
+}
+
 .smallError {
 	color: $link-hover;
 	font-size: .7em;
@@ -52,7 +80,7 @@ body {
 		}
 
 		.lnr {
-			margin-right: 7px;
+			margin-right: 4px;
 		}
 	}
 
@@ -272,24 +300,39 @@ body {
 		margin-top: 20px;
 	}
 
-	button.saveWriting{
-		font-size: .5em;
-		padding: 4px 15px;
-		margin: 7px;
 
-		&:active {
-			background-color: $prime;
-		}
+}
 
-		&:focus {
-			background-color: $prime;
-			color: #000;
-		}
+.writeActions {
+	margin: 10px;
+}
+
+
+button.btn-save{
+	font-size: 10px;
+	padding: 4px 15px;
+
+	&:active {
+		background-color: $prime;
+	}
+
+	&:focus {
+		background-color: $prime;
+		color: #000;
 	}
 }
 
 //media 
 @media (max-width: 600px) {
+
+	.profileInfo {
+
+		img{
+			float: none !important;
+			margin-bottom: 20px;
+		}
+
+	}
 
 	.why{
 		small {
@@ -307,6 +350,8 @@ body {
 }
 
 //overrides
+
+
 .navbar-default {
 	background-color: #fff;
 	border-color: #fff;

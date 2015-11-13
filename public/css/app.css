@@ -5763,6 +5763,28 @@ body {
   body a {
     text-decoration: none !important; }
 
+.profileInfo {
+  display: none;
+  padding: 25px;
+  background-color: #EFFFF2; }
+  .profileInfo label {
+    font-family: "Lato";
+    text-transform: uppercase;
+    display: block;
+    font-size: .7em;
+    font-weight: 600; }
+  .profileInfo .editable {
+    border: none;
+    font-size: 1.3em;
+    border-bottom: 1px dashed #A0A0A0;
+    outline: 0px solid transparent;
+    margin-bottom: 25px; }
+
+.cancelProfilePanel {
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-left: 5px; }
+
 .smallError {
   color: #D24D14;
   font-size: .7em;
@@ -5779,7 +5801,7 @@ body {
     .utl a:hover {
       color: #D24D14; }
     .utl a .lnr {
-      margin-right: 7px; }
+      margin-right: 4px; }
   .utl ul {
     list-style: none; }
     .utl ul li {
@@ -5932,17 +5954,23 @@ body {
   .writing p {
     font-size: .9em;
     margin-top: 20px; }
-  .writing button.saveWriting {
-    font-size: .5em;
-    padding: 4px 15px;
-    margin: 7px; }
-    .writing button.saveWriting:active {
-      background-color: #F8E57B; }
-    .writing button.saveWriting:focus {
-      background-color: #F8E57B;
-      color: #000; }
+
+.writeActions {
+  margin: 10px; }
+
+button.btn-save {
+  font-size: 10px;
+  padding: 4px 15px; }
+  button.btn-save:active {
+    background-color: #F8E57B; }
+  button.btn-save:focus {
+    background-color: #F8E57B;
+    color: #000; }
 
 @media (max-width: 600px) {
+  .profileInfo img {
+    float: none !important;
+    margin-bottom: 20px; }
   .why small {
     font-size: 1.8em;
     width: 100%; }

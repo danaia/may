@@ -17,13 +17,12 @@ $( document ).ready(function() {
 		$('.smallError').html('');
 	});
 
-
-
 	$('.saveWriting').click(function() {
 		
 		var token = $('input[name=_token]').val();
 		var writings = $('.write').html();
 		var title = $('.title').html();
+		$('.smallError').html('');
 
 		$.ajax({
 			type: 'post',
@@ -38,8 +37,6 @@ $( document ).ready(function() {
 				toastr.options.timeOut = 1000;
 				toastr.options.positionClass = "toast-bottom-right";
 				toastr.info("Saved");
-
-				
 			},
 
 			error: function(data) {
@@ -56,6 +53,54 @@ $( document ).ready(function() {
 		});
 
 	})
+
+
+
+	$('.saveProfile').click(function() {
+		
+		var token = $('input[name=_token]').val();
+		var uid = $(this).data("id");
+		var name = $('.name').html();
+		var email = $('.email').html();
+		var bio = $('.bio').html();
+		$('.smallError').html('');
+
+		$.ajax({
+			type: 'put',
+			url: '/user/'+uid,
+			data: {
+				'_token': $('meta[name=csrf-token]').attr('content'),
+				'email': email,
+				'name': name,
+				'bio': bio
+			},
+			success: function(data) {
+				$( ".profileInfo" ).slideUp(200);
+				toastr.options.timeOut = 1000;
+				toastr.options.positionClass = "toast-bottom-right";
+				toastr.info("Profile Updated");
+			},
+
+			error: function(data) {
+				var errors = $.parseJSON(data.responseText);
+
+				$.each(errors, function(index, value) {
+
+					$('.smallError').html(value);
+				});
+			}
+		});
+	})
+
+	//manage the profile pane
+	$( ".showProfile" ).click(function() {
+		$( ".profileInfo" ).slideToggle( 200, function() {
+		});
+	});
+
+	$( ".cancelProfilePanel" ).click (function( ) {
+		$( ".profileInfo" ).slideUp(200);
+	});
 
 
 }); 

@@ -3,23 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Auth;
+use Input;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Auth;
-use App\Write;
-use Input;
-use App\Http\Util;
 
-class WriteController extends Controller
+class UserController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-
     /**
      * Display a listing of the resource.
      *
@@ -27,7 +17,7 @@ class WriteController extends Controller
      */
     public function index()
     {
-        return view('pages.write');
+        //
     }
 
     /**
@@ -46,23 +36,9 @@ class WriteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Requests\WriteRequest $request)
+    public function store(Request $request)
     {
 
-        $write = Input::get('writings');
-        $title = Input::get('title');
-        $uid = Auth::user()->id ;
-        
-        $arr = array(
-            'user_id' => $uid,
-            'writings' => $write,
-            'title' => $title
-            );
-        $w = new Write();
-        $w->fill($arr);
-        $w->save();
-        
-        return $w;
     }
 
     /**
@@ -96,7 +72,21 @@ class WriteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $bio = Input::get('bio');
+        $name = Input::get('name');
+        $email = Input::get('email');
+
+        $arr = array(
+            'bio' => $bio,
+            'name' => $name,
+            'email' => $email
+            );
+        $uu = Auth::user(); 
+        $uu->fill($arr);
+        $uu->save();
+        
+        return $uu;
+        
     }
 
     /**
