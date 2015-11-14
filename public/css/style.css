@@ -1,3 +1,265 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,900);
 body {
-    background-color: red;
-}
+  background-color: #fff;
+  font-family: 'lato', cursive; }
+  body a {
+    text-decoration: none !important; }
+
+ul.listOfWritings {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.profileInfo {
+  display: none;
+  padding: 25px;
+  background-color: #EFFFF2; }
+  .profileInfo label {
+    font-family: "Lato";
+    text-transform: uppercase;
+    display: block;
+    font-size: .7em;
+    font-weight: 600; }
+  .profileInfo .editable {
+    border: none;
+    font-size: 1.3em;
+    border-bottom: 1px dashed #A0A0A0;
+    outline: 0px solid transparent;
+    margin-bottom: 25px; }
+
+.cancelProfilePanel {
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-left: 5px; }
+
+.smallError {
+  color: #D24D14;
+  font-size: .7em;
+  margin: 10px; }
+
+.utl {
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 18px 10px 0 0;
+  padding: 10px;
+  float: right; }
+  .utl a {
+    color: #343434; }
+    .utl a:hover {
+      color: #D24D14; }
+    .utl a .lnr {
+      margin-right: 4px; }
+  .utl ul {
+    list-style: none; }
+    .utl ul li {
+      display: inline-block;
+      margin: 0 20px 0 0; }
+
+.login {
+  padding: 0px 20px 3px 20px; }
+  .login input[type='email'], .login input[type='password'], .login input[type='text'] {
+    background-color: transparent;
+    border: 0;
+    border: 3px solid #BED2FD !important;
+    color: #B94B21;
+    height: 50px;
+    padding: 3px 5px 3px 10px;
+    font-size: 1.2em;
+    outline: none; }
+    .login input[type='email'] h3, .login input[type='password'] h3, .login input[type='text'] h3 {
+      display: inline-block !important; }
+
+.loginAsk {
+  display: inline-block;
+  margin: 0 0 0 20px; }
+
+.why {
+  padding: 35px 20px 3px 30px;
+  font-size: 1.5em;
+  font-weight: 300;
+  outline: none;
+  color: #555555; }
+  .why p {
+    padding: 20px 0 0 0; }
+  .why ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .why ul li {
+      display: inline-block;
+      margin: 5px 18px 0 0;
+      padding: 0; }
+      .why ul li a {
+        color: #555555;
+        font-weight: 600;
+        font-size: .8em; }
+        .why ul li a:hover {
+          text-decoration: none;
+          background-color: #F8E57B; }
+  .why small {
+    font-family: 'Lato';
+    margin: 30px 0 20px 0;
+    display: block;
+    font-weight: 900;
+    font-size: 2.7em;
+    line-height: 1em;
+    width: 90%;
+    font-weight: 200; }
+  .why b {
+    font-family: 'Special Elite', cursive;
+    font-weight: 100;
+    font-size: 1.7em; }
+
+.actions {
+  margin: 30px 0 0 0; }
+
+[contentEditable=true]:empty:not(:focus):before {
+  font-family: 'lato', cursive;
+  content: attr(data-ph);
+  color: #343434;
+  font-weight: 300; }
+
+::selection {
+  background: #F4DC6F; }
+
+::-moz-selection {
+  background: #F4DC6F; }
+
+#r-mainActions {
+  font-family: 'lato', cursive;
+  font-size: 1.3em;
+  background-color: #FAFAFA;
+  padding: 70px 50px 50px 50px;
+  box-sizing: content-box;
+  font-weight: 300; }
+  #r-mainActions small {
+    margin: 20px 0 0 0;
+    display: block; }
+  #r-mainActions ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin: 0px 0 0 0;
+    position: absolute;
+    top: 3px;
+    left: 50px; }
+    #r-mainActions ul li {
+      margin: 20px 15px 0 0;
+      display: inline-block; }
+      #r-mainActions ul li a {
+        font-family: 'lato', cursive;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: .8em;
+        color: #555555; }
+        #r-mainActions ul li a:hover {
+          background-color: #F8E57B; }
+  #r-mainActions .closePanels {
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    font-size: 20px;
+    color: #343434; }
+    #r-mainActions .closePanels a {
+      text-decoration: none;
+      color: #343434; }
+
+.may {
+  font-family: 'Special Elite', cursive;
+  font-weight: 100;
+  font-size: 2.1em;
+  margin: 15px 25px 0 0px !important;
+  letter-spacing: -.09em;
+  color: #555555;
+  background-color: #F8E57B;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+  float: right;
+  padding: 4px  11px 0px 14px;
+  text-decoration: none; }
+  .may:hover {
+    text-decoration: none; }
+
+.writing {
+  padding: 0px 0 0 0;
+  font-family: 'lato', cursive;
+  font-size: 1.5em;
+  color: #343434; }
+  .writing .write {
+    padding: 10px 10px 10px 10px;
+    font-weight: 300; }
+  .writing .write:focus, .writing .title:focus {
+    border: none;
+    border-bottom: 1px dashed #ccc;
+    outline: 0px solid transparent; }
+  .writing .title {
+    padding: 10px 10px 10px 10px;
+    font-size: 1.4em;
+    font-weight: 300; }
+  .writing p {
+    font-size: .9em;
+    margin-top: 20px; }
+
+.writeActions {
+  margin: 10px; }
+
+button.btn-save {
+  font-size: 10px;
+  padding: 4px 15px; }
+  button.btn-save:active {
+    background-color: #F8E57B; }
+  button.btn-save:focus {
+    background-color: #F8E57B;
+    color: #000; }
+
+@media (max-width: 600px) {
+  .profileInfo img {
+    float: none !important;
+    margin-bottom: 20px; }
+
+  .why small {
+    font-size: 1.8em;
+    width: 100%; }
+
+  .tag {
+    display: none; }
+
+  .container {
+    padding-left: 25px;
+    padding-right: 25px; } }
+.navbar-default {
+  background-color: #fff;
+  border-color: #fff; }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.btn-primary {
+  background-color: #F8E57B;
+  font-family: 'lato', cursive;
+  color: #555555;
+  padding: 10px 25px;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none; }
+  .btn-primary:hover {
+    background-color: #F8E57B;
+    color: #000;
+    opacity: .8; }
+
+.alert-danger {
+  background-color: #FFFAFA;
+  border-color: #ebccd1;
+  color: #FF0500; }
+  .alert-danger ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+
+/*# sourceMappingURL=style.css.map */

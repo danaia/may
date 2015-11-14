@@ -1,15 +1,15 @@
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 @import url(https://fonts.googleapis.com/css?family=Bitter:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Special+Elite);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,900);
 
 
-//mixins
+//mixins 
 
-@mixin norm() {
+@mixin norm() { 
 	margin: 0;
-	padding: 0;
+	padding: 0; 
 }
 
 //varibles
@@ -17,8 +17,8 @@ $prime: #F8E57B;
 $prime-input: #B94B21;
 $link-grey: #343434;
 $write-grey: #343434;
-$link-light-grey: #555555;
-$link-hover: #D24D14;
+$link-light-grey: #555555; 
+$link-hover: #D24D14; 
 
 //general
 
@@ -29,6 +29,13 @@ body {
 	a {
 		text-decoration: none !important;
 	}
+}
+
+ul.listOfWritings{
+
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .profileInfo {
@@ -350,7 +357,6 @@ button.btn-save{
 }
 
 //overrides
-
 
 .navbar-default {
 	background-color: #fff;

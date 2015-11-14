@@ -13,9 +13,8 @@ require('laravel-elixir-livereload');
  |
  */
 
-elixir(function(mix) {
-    mix.sass('app.scss');
-});
+//for sass conversion use the command line like this: sass --watch style.scss:/Users/dana/dev/may/public/css/style.css
+
 elixir(function(mix) {
    mix.livereload();
 });

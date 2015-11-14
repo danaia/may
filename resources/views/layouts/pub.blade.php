@@ -6,8 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="csrf-token" content="{{ Session::token() }}"> 
 	<link rel="stylesheet" type="text/css" href="/fonts/lnr/style.css">
-	<link rel="stylesheet" type="text/css" href="/css/app.css">
 	<link rel="stylesheet" type="text/css" href="/bower_components/toastr/toastr.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/app.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body id="pub">
 	@if (Auth::user())
