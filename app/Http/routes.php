@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
+Route::get('myWork', 'WriteController@index');
+Route::get('create', 'WriteController@create');
+
+
 Route::resource('/write', 'WriteController');
 Route::resource('/user', 'UserController');
 

@@ -27,7 +27,7 @@ class WriteController extends Controller
      */
     public function index()
     {
-        return view('pages.write');
+        return view('pages.myWork');
     }
 
     /**
@@ -37,8 +37,8 @@ class WriteController extends Controller
      */
     public function create()
     {
-        //
-    }
+       return view('pages.write');
+   }
 
     /**
      * Store a newly created resource in storage.

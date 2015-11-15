@@ -1,16 +1,6 @@
 
 $( document ).ready(function() {
 
-	//init stuff
-
-	// $('#r-mainActions').slideReveal({
-	// 	trigger: $(".may"),
-	// 	position: "right",
-	// 	width: 300,
-	// 	speed: 200
-	// });
-
-
 	//click stuff
 
 	$( ".write" ).focus(function() {
@@ -93,6 +83,7 @@ $( document ).ready(function() {
 	})
 
 	//manage the profile pane
+
 	$( ".showProfile" ).click(function() {
 		$( ".profileInfo" ).slideToggle( 200, function() {
 		});
@@ -101,6 +92,53 @@ $( document ).ready(function() {
 	$( ".cancelProfilePanel" ).click (function( ) {
 		$( ".profileInfo" ).slideUp(200);
 	});
+
+	//sliders
+
+	$('#pub').on("click",".share",function(e){
+		e.preventDefault();
+		$('#bookPanel').show();
+	});
+
+	$('#pub').on("click",".writeMenu",function(e){
+		e.preventDefault();
+		$('#editPanel').show();
+	});
+
+	var editPanel = $('#editPanel').slideReveal();
+
+	editPanel.slideReveal({
+		trigger: $(".editAction"),
+		position: "left",
+		width: 100,
+		speed: 200,
+		shown: function(editPanel, trigger){
+			$('.writeMenu').removeClass('lnr-menu');
+			$('.writeMenu').addClass('lnr-cross');
+		},
+		hidden: function(editPanel, trigger){
+			$('.writeMenu').removeClass('lnr-cross');
+			$('.writeMenu').addClass('lnr-menu');
+		}
+	});
+
+
+
+
+	$('#bookPanel').slideReveal({
+		trigger: $(".share"),
+		position: "left",
+		push: false,
+		width: 300,
+		speed: 200
+	});
+
+	$('#bookPanel').on("click",".closeBookPanel",function(e){
+		e.preventDefault();
+		$('#bookPanel').slideReveal("hide");
+	});
+
+
 
 
 }); 

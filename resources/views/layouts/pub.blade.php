@@ -11,7 +11,12 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body id="pub">
+
+	{{-- SIDEPANELS --}}
+
 	@if (Auth::user())
+
+	{{-- HEADER --}}
 	<div class="profileInfo">
 		<div class="row">
 			<div class="col-md-1">
@@ -35,16 +40,33 @@
 	</div>
 	@endif
 	<div class="row logo">
-		<div class="col-md-12">
+		<div class="col-md-12 topHead">
 			<div class="may pull-right">m˚p</div>
 			<div class="utl">
 				<ul>
 					@if (Auth::user())
+
+					<li>
+						<a href="/create" class="">Write</a>
+					</li>
+					<li>
+						<a href="/myWork" class="">My Work</a>
+					</li>
+					<li>
+						<a href="/">Read</a>
+					</li>
 					<li>
 						<a href="#" class="showProfile">{{Auth::user()->name}}</a>
 					</li>
 					<li >
 						<a href="/auth/logout"><i class='lnr lnr-power-switch' ></i>Logout</a>
+					</li>
+
+					@else
+					<li class="pubnav">
+						<a href="/auth/register" class="newWrite">Write</a>
+						<a href="/">Read</a>
+						<a href="/auth/login">Login</a>
 					</li>
 					@endif
 				</ul>
@@ -57,6 +79,7 @@
 	</div>
 	<script src="js/j.js"></script>
 	<script src="/bower_components/toastr/toastr.js"></script>
+	<script src="/bower_components/slidereveal/dist/jquery.slidereveal.min.js"></script>
 	<script src="js/all.js"></script>
 </body>
 </html>

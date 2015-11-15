@@ -47,7 +47,7 @@
 					May/Press is an intelligently curated venue for producers of the written word. We are dedicated in producing a beautiful, simple and engaging environment for your most personal and inspiring work.  
 				</p>
 				<p>
-					<ul>
+{{-- 					<ul>
 						<li>
 							<a href="#">Explore Works</a>
 						</li>
@@ -55,7 +55,7 @@
 						<li>
 							<a href="#">Start Writing</a>
 						</li>
-					</ul>
+					</ul> --}}
 				</p>
 			</div>
 		</div>

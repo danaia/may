@@ -8,10 +8,109 @@ body {
   body a {
     text-decoration: none !important; }
 
+#editPanel {
+  display: none;
+  background: #FAFAFA; }
+  #editPanel a {
+    color: #555555;
+    font-size: 1.7em; }
+  #editPanel ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 100px;
+    color: #555555; }
+    #editPanel ul li {
+      margin-bottom: 30px; }
+
+#bookPanel {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 500;
+  padding: 20px;
+  color: #fff; }
+  #bookPanel .closeBookPanel {
+    position: absolute;
+    color: #fff;
+    right: 20px;
+    display: inline-block;
+    margin-top: 5px; }
+
+.editAction {
+  font-size: .9em;
+  margin-right: 10px;
+  color: #555555; }
+  .editAction i {
+    display: inline-block;
+    color: #555555; }
+
+.newWrite {
+  padding: 5px 15px 5px 15px; }
+
+.writeWrap {
+  display: none; }
+
+a.newWriting {
+  text-align: center;
+  width: 100px;
+  display: block;
+  font-size: 4em;
+  color: #828383 !important; }
+  a.newWriting i {
+    margin: 85px 0 0 0 !important; }
+  a.newWriting:hover i {
+    color: #000;
+    opacity: .7;
+    color: #F8E57B; }
+
+.topHead {
+  margin-bottom: 15px; }
+
+.pubnav a {
+  margin: 0 10px 0 0; }
+
 ul.listOfWritings {
   list-style: none;
   margin: 0;
   padding: 0; }
+  ul.listOfWritings h1 {
+    font-size: 1.6em;
+    margin-bottom: 20px; }
+  ul.listOfWritings li {
+    position: relative;
+    display: inline-block;
+    margin: 0px 4px 4px 0;
+    width: 269px;
+    height: 270px; }
+  ul.listOfWritings a {
+    color: #000;
+    width: 269px;
+    height: 270px;
+    margin: 0 !important;
+    background: #FAFAFA;
+    opacity: .6;
+    display: inline-block;
+    padding: 20px;
+    float: left; }
+    ul.listOfWritings a h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 1.5em; }
+    ul.listOfWritings a h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 1.1em;
+      color: #515151;
+      margin-top: 15px; }
+    ul.listOfWritings a h3 {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      bottom: 0;
+      font-size: 1em;
+      margin-top: 15px; }
+    ul.listOfWritings a:hover {
+      opacity: 1; }
 
 .profileInfo {
   display: none;
@@ -33,7 +132,9 @@ ul.listOfWritings {
 .cancelProfilePanel {
   text-transform: uppercase;
   font-size: .7em;
-  margin-left: 5px; }
+  margin-left: 15px; }
+  .cancelProfilePanel a {
+    color: #000; }
 
 .smallError {
   color: #D24D14;
@@ -59,7 +160,7 @@ ul.listOfWritings {
       margin: 0 20px 0 0; }
 
 .login {
-  padding: 0px 20px 3px 20px; }
+  padding: 0px 00px 3px 0px; }
   .login input[type='email'], .login input[type='password'], .login input[type='text'] {
     background-color: transparent;
     border: 0;
@@ -70,7 +171,9 @@ ul.listOfWritings {
     font-size: 1.2em;
     outline: none; }
     .login input[type='email'] h3, .login input[type='password'] h3, .login input[type='text'] h3 {
-      display: inline-block !important; }
+      display: inline-block !important;
+      padding: 0;
+      margin: 0; }
 
 .loginAsk {
   display: inline-block;
@@ -188,22 +291,22 @@ ul.listOfWritings {
   font-size: 1.5em;
   color: #343434; }
   .writing .write {
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 0px;
     font-weight: 300; }
   .writing .write:focus, .writing .title:focus {
     border: none;
     border-bottom: 1px dashed #ccc;
     outline: 0px solid transparent; }
   .writing .title {
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 0px;
     font-size: 1.4em;
-    font-weight: 300; }
+    font-weight: 400; }
   .writing p {
     font-size: .9em;
     margin-top: 20px; }
 
 .writeActions {
-  margin: 10px; }
+  margin: 0px; }
 
 button.btn-save {
   font-size: 10px;
@@ -215,6 +318,15 @@ button.btn-save {
     color: #000; }
 
 @media (max-width: 600px) {
+  ul.listOfWritings h1 {
+    margin: 0;
+    padding: 0;
+    display: inline-block; }
+  ul.listOfWritings li {
+    width: 100%; }
+  ul.listOfWritings a {
+    width: 100%; }
+
   .profileInfo img {
     float: none !important;
     margin-bottom: 20px; }
@@ -228,7 +340,10 @@ button.btn-save {
 
   .container {
     padding-left: 25px;
-    padding-right: 25px; } }
+    padding-right: 25px; }
+
+  body#pub {
+    padding: 20px; } }
 .navbar-default {
   background-color: #fff;
   border-color: #fff; }
